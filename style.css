@@ -1,17 +1,17 @@
-
+@font-face {
+    font-family: "RubikMonoOne";
+    src: url(/fonts/RubikMonoOne-Regular.woff);
+}
 body{
     background-color: #f7f7f7;
 }
 
-h1{
-    font-family: Verdana;
-    text-align: center;
-    color: #eb7da2;
+.container h1{
+
+    font-family: "RubikMonoOne";
+    text-align: justify;
 }
-    h1:hover{
-    font-weight: bold;
-    color: #d4557f;
-    }
+
 h2, h3{
     text-align: center;
     font-family: Verdana;
@@ -22,6 +22,30 @@ p{
     font-family: Verdana;
     margin-bottom: 2em;
 }
+
+.container a, .container h1 {
+    text-decoration: none;
+    color: #ce688a;
+    font-weight: 700;
+    position: relative;
+  }
+  
+  .container a::before, .container h1::before     {
+    content: '';
+    background-color: #ffe0eb;
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 100%;
+    height: 8px;
+    z-index: -1;
+    transition: all .3s ease-in-out;
+  }
+  
+  .container a:hover::before,  .container h1:hover::before   {
+    bottom: 0;
+    height: 100%;
+  }
 
 
 .gallery {
