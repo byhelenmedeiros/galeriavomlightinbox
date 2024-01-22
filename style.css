@@ -22,6 +22,8 @@ p{
     font-family: Verdana;
     margin-bottom: 2em;
 }
+
+
 .gallery {
     display: flex;
     gap: 10px;
