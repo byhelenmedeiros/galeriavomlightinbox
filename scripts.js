@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const lightboxName = document.querySelector(".lightbox-name");
     const lightboxDescription = document.querySelector(".lightbox-description");
     const lightboxTech = document.querySelector(".lightbox-tech");
+    const filterButtons = document.querySelectorAll(".filter-btn");
+
     function openLightbox() {
         lightbox.classList.add("visible");
         lightbox.style.display = "flex";
@@ -74,5 +76,33 @@ document.addEventListener('DOMContentLoaded', function() {
         if (e.target === lightbox) {
             closeLightbox();
         }
+    });
+   
+    function applyFilter(category, activeButton) {
+        galleryItems.forEach(item => {
+            if (category === 'todas' || item.getAttribute('data-category') === category) {
+                item.style.display = ''; // Mostra o item
+            } else {
+                item.style.display = 'none'; // Oculta o item
+            }
+        });
+
+        // Remover a classe 'active' de todos os botões
+        filterButtons.forEach(button => {
+            button.classList.remove('filter-btn-active');
+        });
+
+        // Adicionar a classe 'active' ao botão clicado
+        if (activeButton) {
+            activeButton.classList.add('filter-btn-active');
+        }
+    }
+
+    // Evento de clique para os botões de filtro
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const category = this.getAttribute('data-category');
+            applyFilter(category, this); // Passar 'this' como o botão ativo
+        });
     });
 });

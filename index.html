@@ -13,18 +13,18 @@
 </head>
 <body>
     <div class="container">
-        <h1>Portfólio</h1>
+        <h1>PORTFÓLIO</h1>
         <h2>Confira todos os Projectos realizados</h2>
         <p>Para ver mais detalhes sobre o projecto clique na imagem</p>
         <div class="category-filter">
-            <button class="filter-btn" data-category="Plugins">Ver todos</button>
-            <button class="filter-btn" data-category="Wordpress">Templates</button>
-            <button class="filter-btn" data-category="Elementor">Elementor</button>
-            <button class="filter-btn" data-category="Plugins">Plugins</button>
-            
+            <button class="filter-btn" data-category="todas">Ver todos</button>
+            <button class="filter-btn" data-category="wordpress">Templates</button>
+            <button class="filter-btn" data-category="elementor">Elementor</button>
+            <button class="filter-btn" data-category="plugins">Plugins</button>
         </div>
         <div class="gallery">
-            <div class="gallery-item">
+            <div class="gallery-item" data-category="elementor"
+            >
                 <img 
                 src="/images/websitepodologia.png" 
                 data-name="Website MyFeet Podologia" 
@@ -32,11 +32,12 @@
                 data-tech="bi-html5, bi-bootstrap, bi-javascript, bi-php, bi-wordpress, bi-box-seam"
                 data-src="/images/websitepodologia.png"
                 data-link="https://example.com"
-                data-category="Sites - Elementor"
+                data-category="elementor"
                 alt="desktop portfolio elementor MyFeet website" 
                 class="gallery-image">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-category="wordpress"
+            >
                 <img 
                 src="/images/ipvctemplate.png" 
                 data-src="/images/ipvctemplate.png"
@@ -45,11 +46,11 @@
                 data-tech="bi-html5, bi-css3"
                 data-src="/images/ipvctemplate.png"
                 data-link="https://example.com"
-                data-category="Sites"
                 alt="desktop portfolio" 
                 class="gallery-image">
-            </div>
-            <div class="gallery-item">
+            </div> 
+            <div class="gallery-item" data-category="wordpress"
+            >
                 <img 
                 src="/images/websitefloristasalome.png" 
                 data-src="/images/websitefloristasalome.png"
@@ -58,11 +59,10 @@
                 data-tech="bi-html5, bi-css3"
                 data-src="/images/websitefloristasalome.png"
                 data-link="https://example.com"
-                data-category="Sites - Wordpress"
                 alt="desktop portfolio"
                 class="gallery-image">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-category="wordpress">
                 <img 
                 src="/images/screenshot.jpeg" 
                 data-src="/images/screenshot.jpeg" 
@@ -71,7 +71,6 @@
                 data-tech="bi-html5, bi-css3"
                 data-src="/images/screenshot.jpeg"
                 data-link="https://example.com"
-                data-category="Sites - WordPress"
                 alt="desktop portfolio" 
                 class="gallery-image">
             </div>

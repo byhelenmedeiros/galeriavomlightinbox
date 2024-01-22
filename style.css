@@ -137,6 +137,8 @@ p{
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
+    margin-bottom: 2em;
+
 }
 .category-filter button{
   
@@ -146,9 +148,11 @@ p{
     border: 1px solid #cacaca;
     font: 0.8em Verdana;
     font-weight: bold;
-    margin-bottom: 2em;
     transition: 0.3s;
-
+}
+.category-filter  .filter-btn-active {
+    background-color: #d4557f; 
+    color: white; 
 }
 .category-filter button:hover{
     background-color: #5894bd;
