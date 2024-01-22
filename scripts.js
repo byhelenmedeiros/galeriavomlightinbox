@@ -7,7 +7,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const lightboxDescription = document.querySelector(".lightbox-description");
     const lightboxTech = document.querySelector(".lightbox-tech");
 
-    // Abre o lightbox 
+    // Função para abrir o lightbox
+    function openLightbox() {
+        lightbox.classList.add("visible");
+        lightbox.style.display = "flex";
+    }
+
+    // Função para fechar o lightbox
+    function closeLightbox() {
+        lightbox.classList.remove("visible");
+
+        setTimeout(() => {
+            lightbox.style.display = 'none';
+        }, 100);
+    }
+
+    // Abre o lightbox
     galleryItems.forEach(item => {
         item.addEventListener("click", () => {
             const imgElement = item.querySelector("img");
@@ -41,18 +56,27 @@ document.addEventListener('DOMContentLoaded', function() {
                 lightboxTech.appendChild(projectLinkElement);
             }
 
-            lightbox.classList.add("visible");
-            lightbox.style.display = "flex";
+            openLightbox(); 
         });
     });
 
-    // Fecha o lightbox 
+    // Fecha o lightbox
     lightboxClose.addEventListener("click", (e) => {
         e.preventDefault(); 
-        lightbox.classList.remove("visible");
-    
-        setTimeout(() => {
-            lightbox.style.display = 'none';
-        }, 100);
+        closeLightbox(); 
+    });
+
+    // Fecha o lightbox ao pressionar a tecla "Esc"
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.style.display === 'flex') {
+            closeLightbox();
+        }
+    });
+
+    // Fecha o lightbox ao clicar fora do conteúdo do lightbox
+    lightbox.addEventListener("click", function(e) {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
     });
 });
