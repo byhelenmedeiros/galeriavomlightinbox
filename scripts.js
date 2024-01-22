@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
             lightboxName.textContent = name;
             lightboxDescription.textContent = description;
 
-            // Limpa o conteúdo anterior e adiciona os ícones de tecnologia
             lightboxTech.innerHTML = '';
             if (techAttribute) {
                 const techList = techAttribute.split(", ");
@@ -33,13 +32,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 techIcons.forEach(icon => lightboxTech.appendChild(icon));
             }
 
-            // Adiciona o link do projeto, se disponível
             if (projectLink) {
                 const projectLinkElement = document.createElement("a");
                 projectLinkElement.setAttribute("href", projectLink);
                 projectLinkElement.textContent = "Visualizar Projeto";
-                projectLinkElement.target = "_blank"; // Abre em uma nova aba
-                projectLinkElement.classList.add("project-link"); // Adiciona uma classe para estilização (opcional)
+                projectLinkElement.target = "_blank"; 
+                projectLinkElement.classList.add("project-link"); 
                 lightboxTech.appendChild(projectLinkElement);
             }
 
@@ -55,6 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
         setTimeout(() => {
             lightbox.style.display = 'none';
-        }, 400); // Tempo para a transição (ajustável)
+        }, 100);
     });
 });
