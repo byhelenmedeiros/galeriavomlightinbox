@@ -2,10 +2,10 @@
     font-family: "RubikMonoOne";
     src: url(/fonts/RubikMonoOne-Regular.woff);
 }
-body{
-    background-color: #f7f7f7;
-}
 
+
+
+/*section porfolio*/
 
 .container-portfolio {
     display: flex;
