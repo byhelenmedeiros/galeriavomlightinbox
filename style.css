@@ -6,21 +6,35 @@ body{
     background-color: #f7f7f7;
 }
 
-.container h1{
+
+.container-portfolio {
+    display: flex;
+    flex-direction: column; 
+    align-items: justify;
+    text-align: center; 
+    gap: 5px;
+}
+
+.container-portfolio h1{
 
     font-family: "RubikMonoOne";
     text-align: justify;
+    margin-bottom: 0;
+}
+.container-portfolio h1::after{
+    content: " ";
 }
 
 h2, h3{
     text-align: center;
     font-family: Verdana;
 }
-p{
-    text-align: center;
+.container-portfolio p{
+    text-align: left;
     font-size: 0.7em;
     font-family: Verdana;
     margin-bottom: 2em;
+    margin-top: 0; 
 }
 
 .container a, .container h1 {
@@ -30,7 +44,7 @@ p{
     position: relative;
   }
   
-  .container a::before, .container h1::before     {
+  .container a::before, .container-portfolio h1::before     {
     content: '';
     background-color: #ffe0eb;
     position: absolute;
@@ -42,10 +56,27 @@ p{
     transition: all .3s ease-in-out;
   }
   
-  .container a:hover::before,  .container h1:hover::before   {
+  .container a:hover::before,  .container-portfolio h1:hover::before   {
     bottom: 0;
     height: 100%;
   }
+
+/*efeito de escrita*/
+#typewriter-text {
+    white-space: nowrap;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border-right: 0.1em solid black;
+}
+
+.cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
 
 
 .gallery {
@@ -107,9 +138,10 @@ p{
 }
 
 .lightbox-details {
+    font-family: verdana;
     background-color: #f7f7f7;
     width: 80%;
-    height: 180x;
+    font-size: 0.8em;
     border-radius: 10px;
     padding: 10px;
     box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.226);

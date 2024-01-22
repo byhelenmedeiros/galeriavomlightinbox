@@ -105,4 +105,23 @@ document.addEventListener('DOMContentLoaded', function() {
             applyFilter(category, this); // Passar 'this' como o botão ativo
         });
     });
+
+    
 });
+//efeito de escrita 
+function typeWriter(element, text, speed) {
+    let i = 0;
+    function typing() {
+        if (i < text.length) {
+            element.innerHTML = text.substring(0, i + 1) + '<span class="cursor">|</span>';
+            i++;
+            setTimeout(typing, speed);
+        } else {
+            element.innerHTML = text + '<span class="cursor">|</span>';
+        }
+    }
+    typing();
+}
+const textToType = "Para ver mais detalhes sobre o projeto clique na imagem";
+const speed = 100; // Velocidade da digitação em milissegundos
+typeWriter(document.getElementById('typewriter-text'), textToType, speed);
