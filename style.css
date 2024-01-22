@@ -87,19 +87,55 @@ h2, h3{
 }
 
 .gallery-item {
-    flex: 1 1 calc(80% - 10px); 
-    max-width: 200px; 
+    position: relative;
+    flex: 1 1 calc(80% - 10px);
+    max-width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .gallery-image {
     width: 100%;
     height: 150px;
     object-fit: cover;
-    border-radius: 10px;
-    border: solid 1px #949494;
+    border-radius: 10px; 
     transition: transform 0.3s ease;
     cursor: pointer;
 }
+
+.gallery-item:hover .project-info {
+    opacity: 1;
+    z-index: 100;
+    transform: scale(1.05); 
+}
+
+.gallery-item .project-info {
+    color: white; 
+    font-size: 0.7em; 
+    z-index: 100;
+    font-family: verdana;
+    font-weight: bold;
+
+}
+
+.project-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 150px; 
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    border-radius: 10px; 
+}
+
+
 
 .gallery-image:hover {
     transform: scale(1.05); 

@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    //definicao das variaveis
     const galleryItems = document.querySelectorAll(".gallery-item");
     const lightbox = document.querySelector(".lightbox");
     const lightboxImage = document.querySelector(".lightbox-image");
@@ -7,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const lightboxDescription = document.querySelector(".lightbox-description");
     const lightboxTech = document.querySelector(".lightbox-tech");
     const filterButtons = document.querySelectorAll(".filter-btn");
-
+ 
     function openLightbox() {
         lightbox.classList.add("visible");
         lightbox.style.display = "flex";
@@ -122,6 +123,16 @@ function typeWriter(element, text, speed) {
     }
     typing();
 }
+
+typeWriter(document.getElementById('typewriter-text'), textToType, speed);
 const textToType = "Para ver mais detalhes sobre o projeto clique na imagem";
 const speed = 100; // Velocidade da digitação em milissegundos
-typeWriter(document.getElementById('typewriter-text'), textToType, speed);
+
+
+document.querySelectorAll('.gallery-item').forEach(item => {
+    const projectName = item.querySelector('img').getAttribute('data-name');
+    const infoDiv = document.createElement('div');
+    infoDiv.classList.add('project-name');
+    infoDiv.textContent = projectName; 
+    item.querySelector('.project-info').appendChild(infoDiv);
+});
