@@ -131,3 +131,27 @@ p{
 .project-link:hover {
     text-decoration: underline; 
 }
+
+.category-filter {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.category-filter button{
+  
+    border-radius: 15px;
+    padding: 0.5em 2em;
+    color: #696969;
+    border: 1px solid #cacaca;
+    font: 0.8em Verdana;
+    font-weight: bold;
+    margin-bottom: 2em;
+    transition: 0.3s;
+
+}
+.category-filter button:hover{
+    background-color: #5894bd;
+    color: #f7f7f7;
+    cursor: pointer;
+}

@@ -6,14 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const lightboxName = document.querySelector(".lightbox-name");
     const lightboxDescription = document.querySelector(".lightbox-description");
     const lightboxTech = document.querySelector(".lightbox-tech");
-
-    // Função para abrir o lightbox
     function openLightbox() {
         lightbox.classList.add("visible");
         lightbox.style.display = "flex";
     }
-
-    // Função para fechar o lightbox
     function closeLightbox() {
         lightbox.classList.remove("visible");
 
