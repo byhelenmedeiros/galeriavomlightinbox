@@ -77,8 +77,6 @@ h2, h3{
     50% { opacity: 0; }
 }
 
-
-
 .gallery {
     display: flex;
     gap: 10px;
@@ -111,10 +109,11 @@ h2, h3{
 
 .gallery-item .project-info {
     color: white; 
-    font-size: 0.7em; 
+    font-size: 0.6em; 
     z-index: 100;
     font-family: verdana;
     font-weight: bold;
+    text-align: center;
 
 }
 

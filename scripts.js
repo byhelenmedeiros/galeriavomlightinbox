@@ -110,8 +110,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
 });
 //efeito de escrita 
+
 function typeWriter(element, text, speed) {
     let i = 0;
+
     function typing() {
         if (i < text.length) {
             element.innerHTML = text.substring(0, i + 1) + '<span class="cursor">|</span>';
@@ -121,12 +123,14 @@ function typeWriter(element, text, speed) {
             element.innerHTML = text + '<span class="cursor">|</span>';
         }
     }
+
     typing();
 }
 
-typeWriter(document.getElementById('typewriter-text'), textToType, speed);
+// Iniciar a animação
 const textToType = "Para ver mais detalhes sobre o projeto clique na imagem";
-const speed = 100; // Velocidade da digitação em milissegundos
+const typingSpeed = 100;
+typeWriter(document.getElementById('typewriter-text'), textToType, typingSpeed);
 
 
 document.querySelectorAll('.gallery-item').forEach(item => {
