@@ -1,0 +1,46 @@
+/* style-dark.css - Tema Escuro */
+
+@import url('style-normal.css');
+
+.secao-background {
+    background-color: #0b0b0b;
+    color: #fafafa;
+}
+
+.container a, .container h1 {
+    color: #5894bd;
+}
+
+.container a::before, .container-portfolio h1::before {
+    background-color: #007acc;
+}
+
+.gallery-item .project-info {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #333;
+}
+
+.lightbox-details {
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.category-filter button {
+    background-color: #5894bd;
+    color: #fafafa;
+    border: 1px solid #007acc;
+}
+
+.category-filter .filter-btn-active {
+    background-color: #d4557f;
+    color: #fafafa;
+}
+
+.category-filter button:hover {
+    background-color: #007acc;
+    color: #fafafa;
+}
+
+.theme-icon {
+    color: #ffb039;
+}

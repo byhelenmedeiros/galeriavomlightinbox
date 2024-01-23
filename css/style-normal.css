@@ -1,62 +1,83 @@
+/* style-normal.css - Tema Normal */
+
 @font-face {
     font-family: "RubikMonoOne";
     src: url(/fonts/RubikMonoOne-Regular.woff);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
+.theme-icon {
+    font-size: 1.8em;
+    text-align: end;
+    margin-right: 10%;
+    padding-top: 2%;
+}
+
+#light-theme {
+    color: #ffb039;
+}
+
+#dark-theme {
+    color: #003e9b;
+}
+
+
 .secao-background {
     position: relative;
     z-index: 10;
-    background-color: #fafafa; 
+    background-color: #fafafa;
     padding-bottom: 5em;
-
 }
 
 .container-portfolio {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: justify;
-    text-align: center; 
+    text-align: center;
     gap: 5px;
 }
 
-.container-portfolio h1{
-
+.container-portfolio h1 {
     font-family: "RubikMonoOne";
     text-align: justify;
     margin-bottom: 0;
     margin-top: 20px;
     padding-left: 10%;
 }
-.container-portfolio h1::after{
+
+.container-portfolio h1::after {
     content: " ";
 }
 
-h2, h3{
+h2,
+h3 {
     text-align: center;
     font-family: Verdana;
 }
-.container-portfolio p{
+
+.container-portfolio p {
     text-align: left;
     font-size: 0.7em;
     font-family: Verdana;
     margin-bottom: 2em;
-    margin-top: 0; 
+    margin-top: 0;
     padding-left: 10%;
 }
 
-.container a, .container h1 {
+.container a,
+.container h1 {
     text-decoration: none;
     color: #ce688a;
     font-weight: 700;
     position: relative;
-  }
-  
-  .container a::before, .container-portfolio h1::before     {
+}
+
+.container a::before,
+.container-portfolio h1::before {
     content: '';
     background-color: #ffe0eb;
     position: absolute;
@@ -66,12 +87,13 @@ h2, h3{
     height: 8px;
     z-index: -1;
     transition: all .3s ease-in-out;
-  }
-  
-  .container a:hover::before,  .container-portfolio h1:hover::before   {
+}
+
+.container a:hover::before,
+.container-portfolio h1:hover::before {
     bottom: 0;
     height: 100%;
-  }
+}
 
 /*efeito de escrita*/
 #typewriter-text {
@@ -86,7 +108,9 @@ h2, h3{
 }
 
 @keyframes blink {
-    50% { opacity: 0; }
+    50% {
+        opacity: 0;
+    }
 }
 
 .gallery {
@@ -108,7 +132,7 @@ h2, h3{
     width: 100%;
     height: 150px;
     object-fit: cover;
-    border-radius: 10px; 
+    border-radius: 10px;
     transition: transform 0.3s ease;
     cursor: pointer;
 }
@@ -116,25 +140,24 @@ h2, h3{
 .gallery-item:hover .project-info {
     opacity: 1;
     z-index: 100;
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
 .gallery-item .project-info {
-    color: white; 
-    font-size: 0.6em; 
+    color: white;
+    font-size: 0.6em;
     z-index: 100;
     font-family: verdana;
     font-weight: bold;
     text-align: center;
-
 }
 
 .project-info {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; 
-    height: 150px; 
+    width: 100%;
+    height: 150px;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     display: flex;
@@ -143,15 +166,12 @@ h2, h3{
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
-
-
 
 .gallery-image:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
-
 
 .lightbox {
     display: none;
@@ -162,18 +182,15 @@ h2, h3{
     width: 100%;
     height: 100%;
     z-index: 100;
-
     justify-content: center;
     align-items: center;
 }
 
 .lightbox-content {
-    
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 700px;
-    
 }
 
 .lightbox-image {
@@ -213,26 +230,27 @@ h2, h3{
 }
 
 .lightbox-tech i {
-    display: inline-block; 
-    margin-right: 10px; 
-    font-size: 2em; 
-    vertical-align: middle; 
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 2em;
+    vertical-align: middle;
 }
+
 .lightbox-tech i:hover {
     color: #6e6e6e;
     transition: 0.5s;
 }
 
 .project-link {
-    display: block; 
-    margin-top: 10px; 
-    font-size: 1.5em; 
+    display: block;
+    margin-top: 10px;
+    font-size: 1.5em;
     color: #d4557f;
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 .project-link:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
 .category-filter {
@@ -241,10 +259,9 @@ h2, h3{
     gap: 10px;
     flex-wrap: wrap;
     margin: 1em 0 2em 0;
-
 }
-.category-filter button{
-  
+
+.category-filter button {
     border-radius: 15px;
     padding: 0.5em 2em;
     color: #696969;
@@ -253,11 +270,13 @@ h2, h3{
     font-weight: bold;
     transition: 0.3s;
 }
-.category-filter  .filter-btn-active {
-    background-color: #d4557f; 
-    color: white; 
+
+.category-filter .filter-btn-active {
+    background-color: #d4557f;
+    color: white;
 }
-.category-filter button:hover{
+
+.category-filter button:hover {
     background-color: #5894bd;
     color: #f7f7f7;
     cursor: pointer;

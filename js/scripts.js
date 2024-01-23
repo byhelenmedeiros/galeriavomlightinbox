@@ -140,3 +140,5 @@ document.querySelectorAll('.gallery-item').forEach(item => {
     infoDiv.textContent = projectName; 
     item.querySelector('.project-info').appendChild(infoDiv);
 });
+
+
